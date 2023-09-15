@@ -21,7 +21,7 @@ const Sidenav = () => {
     setopenNav(!openNav);
   };
   return (
-    <div className="w-full h-min md:h-full bg-gradient-to-b from-blue-500 to-blue-500 md:rounded-lg px-8 md:px-12 py-4 md:py-12 flex flex-col justify-start text-gray-100">
+    <div className="w-full h-min md:h-full bg-gradient-to-b from-blue-500 to-blue-500 md:rounded-[20px] px-8 md:px-12 py-4 md:py-12 flex flex-col justify-start text-gray-100">
       <div className="flex flex-col justify-center items-start w-full">
         <span className="flex justify-between items-center md:block text-4xl font-extrabold md:pb-8 w-full">
           <p>Board.</p>{" "}
@@ -29,13 +29,13 @@ const Sidenav = () => {
             <FontAwesomeIcon
               icon={faBars}
               onClick={toggle}
-              className="lg:hidden block rotate-90 text-xl duration-200"
+              className="mdhidden block rotate-90 text-xl duration-200"
             />
           ) : (
             <FontAwesomeIcon
               icon={faBars}
               onClick={toggle}
-              className="lg:hidden block text-xl duration-200"
+              className="mdhidden block text-xl duration-200"
             />
           )}
         </span>
