@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
 import Search from './Search'
 import user_img from '../media/user_img.svg'
+import Cardlist from './Cardlist';
 
 const Dashboard = () => {
   return (
@@ -15,6 +16,7 @@ const Dashboard = () => {
             <img src={user_img} alt='user' className='ml-2 md:ml-4' />
         </div>
       </div>
+      <Cardlist/>
     </div>
   )
 }

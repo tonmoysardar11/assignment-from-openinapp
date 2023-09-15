@@ -29,13 +29,13 @@ const Sidenav = () => {
             <FontAwesomeIcon
               icon={faBars}
               onClick={toggle}
-              className="mdhidden block rotate-90 text-xl duration-200"
+              className="md:hidden block rotate-90 text-xl duration-200"
             />
           ) : (
             <FontAwesomeIcon
               icon={faBars}
               onClick={toggle}
-              className="mdhidden block text-xl duration-200"
+              className="md:hidden block text-xl duration-200"
             />
           )}
         </span>
