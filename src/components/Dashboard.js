@@ -4,6 +4,7 @@ import { faBell } from "@fortawesome/free-solid-svg-icons";
 import Search from './Search'
 import user_img from '../media/user_img.svg'
 import Cardlist from './Cardlist';
+import Charts from './Charts';
 
 const Dashboard = () => {
   return (
@@ -17,6 +18,7 @@ const Dashboard = () => {
         </div>
       </div>
       <Cardlist/>
+      <Charts/>
     </div>
   )
 }

@@ -8,7 +8,6 @@ const url='https://api.coinlore.net/api/tickers/?start=0&limit=4'
 const getData=async()=>{
     const fetchData= await fetch(url)
     const response =await fetchData.json()
-    console.log(response.data)
     setdata(response.data)
 }
 

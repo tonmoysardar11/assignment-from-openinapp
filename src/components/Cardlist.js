@@ -38,7 +38,7 @@ const Cardlist = () => {
     }
   };
   return (
-    <div className="w-full flex flex-wrap justify-between items center py-8">
+    <div className="w-full flex flex-wrap justify-between py-2">
       {data.map((element, index) => {
         return (
           <div
