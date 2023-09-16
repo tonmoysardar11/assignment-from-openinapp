@@ -43,7 +43,7 @@ const Cardlist = () => {
         return (
           <div
             key={element.id}
-            className="w-full h-auto md:min-h-[18vh] md:w-1/4 py-2 pr-2"
+            className="w-1/2 h-auto md:min-h-[18vh] md:w-1/4 py-2 pr-2"
           >
             <Card icon={icon(index)} clr={clr(index)} data={element}/>
           </div>

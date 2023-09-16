@@ -21,9 +21,9 @@ const Sidenav = () => {
     setopenNav(!openNav);
   };
   return (
-    <div className="w-full h-min md:h-full bg-gradient-to-b from-blue-500 to-blue-500 md:rounded-[20px] px-8 md:px-12 py-4 md:py-12 flex flex-col justify-start text-gray-100">
+    <div className="w-full h-min md:h-full bg-gradient-to-b from-blue-500 to-blue-500 md:rounded-[20px] px-4 lg:px-12 py-4 lg:py-12 flex flex-col justify-start text-gray-100">
       <div className="flex flex-col justify-center items-start w-full">
-        <span className="flex justify-between items-center md:block text-4xl font-extrabold md:pb-8 w-full">
+        <span className="flex justify-between items-center md:block text-2xl lg:text-4xl font-extrabold md:pb-8 w-full">
           <p>Board.</p>{" "}
           {openNav ? (
             <FontAwesomeIcon
@@ -48,7 +48,7 @@ const Sidenav = () => {
         <ul className="flex flex-col w-full py-8 md:py-0">
           {menu.map((element, index) => {
             return (
-              <li key={index} className={index===0?"font-bold flex py-3 cursor-pointer":"flex py-3 hover:font-bold cursor-pointer"}>
+              <li key={index} className={index===0?"text-sm lg:text-md font-bold flex py-3 cursor-pointer":"text-sm lg:text-md flex py-3 hover:font-bold cursor-pointer"}>
                 <img src={element.icon} alt={element.name} />
                 <p className="px-4">
                   {element.name}

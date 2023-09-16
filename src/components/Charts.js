@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useState,useEffect } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -13,6 +13,22 @@ import { datacontext } from "../context/datacontext";
 
 const Charts = () => {
   const output = useContext(datacontext);
+  const [wSize, setwSize] = useState(0);
+  const getWsize=()=>{
+    const newSize = window.innerWidth;
+    console.log(newSize)
+    setwSize(newSize)
+  }
+
+useEffect(() => {
+  window.addEventListener('resize', getWsize);
+
+    
+
+    return () => {
+      window.removeEventListener('resize', getWsize);
+    };
+}, []);
 
   const { data } = output;
   ChartJS.register(
@@ -26,7 +42,7 @@ const Charts = () => {
 
   const options = {
     responsive: true,
-    aspectRatio: 4 | 5,
+    aspectRatio: wSize<496?1:4|5,
     options: {
       layout: {
         padding: 20,
@@ -62,7 +78,7 @@ const Charts = () => {
   };
 
   return (
-    <div className="w-full flex flex-col justify-between items center border-[1px] border-gray-300 rounded-[15px] shadow-md shadow-gray-200 py-2 px-2 md:px-8 h-[50vh] md:h-max">
+    <div className="w-full flex flex-col justify-between items center border-[1px] border-gray-300 rounded-[15px] shadow-md shadow-gray-200 py-2 px-2 md:px-8 h-max">
       <div className="w-full flex justify-between items-center">
         <div className="flex flex-col justify-start pb-4">
           <p className="text-gray-900 font-bold text-lg md:text-2xl">
