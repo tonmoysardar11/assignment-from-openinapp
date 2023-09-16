@@ -16,7 +16,6 @@ const Charts = () => {
   const [wSize, setwSize] = useState();
   const getWsize=()=>{
     const newSize = window.innerWidth;
-    console.log(newSize)
     setwSize(newSize)
   }
 
