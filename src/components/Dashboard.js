@@ -5,6 +5,7 @@ import Search from './Search'
 import user_img from '../media/user_img.svg'
 import Cardlist from './Cardlist';
 import Charts from './Charts';
+import DoughnutChart from './DoughnutChart';
 
 const Dashboard = () => {
   return (
@@ -19,6 +20,18 @@ const Dashboard = () => {
       </div>
       <Cardlist/>
       <Charts/>
+      <div className='w-full flex flex-col md:flex-row items-center'>
+        <div className='w-full md:w-1/2 py-4'>
+          <div className='border-[1px] border-gray-300 rounded-[15px] shadow-md shadow-gray-200 p-4 flex justify-between items-center'>
+          <DoughnutChart/>
+          </div>
+
+        </div>
+        <div className='w-full md:w-1/2 py-4'>
+<div className='border-[1px] border-gray-300 rounded-[15px] shadow-md shadow-gray-200'></div>
+        </div>
+
+      </div>
     </div>
   )
 }
