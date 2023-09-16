@@ -13,7 +13,7 @@ import { datacontext } from "../context/datacontext";
 
 const Charts = () => {
   const output = useContext(datacontext);
-  const [wSize, setwSize] = useState(0);
+  const [wSize, setwSize] = useState();
   const getWsize=()=>{
     const newSize = window.innerWidth;
     console.log(newSize)
@@ -21,10 +21,7 @@ const Charts = () => {
   }
 
 useEffect(() => {
-  window.addEventListener('resize', getWsize);
-
-    
-
+  window.addEventListener('resize', getWsize); 
     return () => {
       window.removeEventListener('resize', getWsize);
     };
@@ -78,7 +75,7 @@ useEffect(() => {
   };
 
   return (
-    <div className="w-full flex flex-col justify-between items center border-[1px] border-gray-300 rounded-[15px] shadow-md shadow-gray-200 py-2 px-2 md:px-8 h-max">
+    <div className="w-full flex flex-col justify-between items center border-[1px] border-gray-300 rounded-[15px] shadow-md shadow-gray-200 py-2 px-2 md:px-8 max-h-[50vh]">
       <div className="w-full flex justify-between items-center">
         <div className="flex flex-col justify-start pb-4">
           <p className="text-gray-900 font-bold text-lg md:text-2xl">
