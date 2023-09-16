@@ -38,12 +38,8 @@ useEffect(() => {
 
   const options = {
     responsive: true,
-    aspectRatio: wSize<496?1:4|5,
-    options: {
-      layout: {
-        padding: 20,
-      },
-    },
+    aspectRatio:wSize<768?3|1: 4|5,
+    
     plugins: {
       legend: {
         display: false,
