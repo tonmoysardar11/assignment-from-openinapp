@@ -4,7 +4,7 @@ import Dashboard from "./Dashboard";
 
 const Home = () => {
   return (
-    <div className="flex flex-col md:flex-row w-screen h-auto md:h-screen">
+    <div className="flex flex-col md:flex-row w-screen h-auto md:h-screen overflow-x-hidden">
       <div className="w-full md:w-1/5 md:p-5">
         <Sidenav />
       </div>

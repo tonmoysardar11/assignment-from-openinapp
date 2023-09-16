@@ -38,12 +38,12 @@ const Cardlist = () => {
     }
   };
   return (
-    <div className="w-full flex flex-wrap justify-between py-2">
+    <div className="w-full flex flex-wrap justify-between">
       {data.map((element, index) => {
         return (
           <div
             key={element.id}
-            className="w-1/2 h-auto md:min-h-[18vh] md:w-1/4 py-2 pr-2"
+            className={`w-1/2 h-auto md:min-h-[18vh] md:w-1/4 py-2 ${index!==data.length-1?'pr-2':''}`}
           >
             <Card icon={icon(index)} clr={clr(index)} data={element}/>
           </div>
